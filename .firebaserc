@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "default": "project-id",
+    "research": "research-a7d62"
+  },
+  "targets": {
+    "research": {
+      "hosting": {
+        "main": [
+          "research"
+        ]
+      }
+    },
+    "research-a7d62": {
+      "hosting": {
+        "main": [
+          "research-a7d62"
+        ]
+      }
+    }
+  }
+}

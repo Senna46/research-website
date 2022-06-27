@@ -1,0 +1,31 @@
+<mat-toolbar>
+  <span class="flex-auto">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </span>
+  <button mat-button class="text-base sm:text-2xl" [routerLink]="'/'">OHMURA Senna</button>
+  <span class="flex-auto"></span>
+  <button mat-icon-button [routerLink]="'/contact'">
+    <mat-icon>mail_outline</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container style="height: calc(100vh - 64px)">
+  <mat-sidenav mode="over" #sidenav>
+    <mat-nav-list>
+      <mat-list-item routerLink="/seminar" (click)="sidenav.close()">
+        <mat-icon class="mr-2" color="primary">science</mat-icon>研究 Research
+      </mat-list-item>
+      <mat-list-item routerLink="/room" (click)="sidenav.close()">
+        <mat-icon class="mr-2" color="primary">article</mat-icon>業績 Performance
+      </mat-list-item>
+      <mat-list-item routerLink="/contact" (click)="sidenav.close()">
+        <mat-icon class="mr-2" color="primary">mail</mat-icon>お問い合わせ Contact
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
