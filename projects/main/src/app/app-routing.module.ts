@@ -8,6 +8,11 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () => import('./pages/contact/contact.module').then((m) => m.AppContactModule),
   },
+  {
+    path: 'performance',
+    loadChildren: () =>
+      import('./pages/performance/performance.module').then((m) => m.AppPerformanceModule),
+  },
 ];
 
 @NgModule({
